@@ -1,0 +1,442 @@
+:root {
+  --scarpa-flow: #515265;
+  --nebula: #d1e0de;
+}
+
+/* Wrapper */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+  padding: 6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
+
+section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+/* Margin */
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.mt-72 {
+  margin-top: 18rem;
+}
+
+.mt-96 {
+  margin-top: 34rem;
+}
+
+/* Padding */
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+/* Max Width */
+.max-width-xl {
+  max-width: 36rem;
+}
+
+.max-width-4xl {
+  max-width: 56rem;
+}
+
+/* Text */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+/* Font */
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 800;
+}
+
+.font-extrabold {
+  font-weight: 900;
+}
+
+/* Colors */
+.text-white {
+  color: white;
+}
+
+.bg-scarpa-flow-600 {
+  background-color: #515266;
+}
+
+.text-scarpa-flow-700 {
+  color: var(--scarpa-flow);
+}
+
+.bg-scarpa-flow-700 {
+  background-color: var(--scarpa-flow);
+}
+
+.text-nebula-100 {
+  color: var(--nebula);
+}
+
+.bg-nebula-100 {
+  background-color: var(--nebula);
+}
+
+/* List */
+.list-none {
+  list-style-type: none;
+}
+
+/* Leading */
+.leading-normal {
+  line-height: 1.5;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-items-end {
+  justify-items: end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Space */
+.space-x-3 > * + * {
+  margin-left: 0.75rem;
+}
+
+.space-x-20 > * + * {
+  margin-right: 5rem;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+/* Border */
+.border {
+  border: 1px solid black;
+}
+
+.rounded {
+  border-radius: 9999px;
+}
+
+#about-us {
+  background-image: url('../images/about-us.png');
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  #about-us > div > h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  #about-us > div > div {
+    margin-top: 2.75rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  #about-us > div > div > p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #515265;
+  padding: 1rem 6rem 1rem 6rem;
+}
+
+header button {
+  display: none;
+  cursor: pointer;
+  background-color: #434454;
+  border: none;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar ul li a {
+  display: block;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+
+  header button {
+    display: block;
+  }
+
+  .nav-bar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #434454;
+    z-index: 1;
+  }
+
+  .nav-bar ul {
+    display: none;
+    height: 165px;
+    margin: 10px auto 0px auto;
+    text-align: center;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.nav-bar ul.active {
+  display: block;
+}
+
+.jumbotron {
+  background-image: url('../images/jumbotron.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.jumbotron-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.jumbotron :not(:first-child) {
+  z-index: 1;
+}
+
+.jumbotron > div > a:hover {
+  background-color: white;
+  color: #515266;
+}
+
+#what-we-do {
+  background-image: url('../images/what-we-do.png');
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  #what-we-do > div > h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  #what-we-do > div > div {
+    margin-top: 2.75rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  #what-we-do > div > div > p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+#developing {
+  background-image: url('../images/developing.png');
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  #developing > div > p {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+#meet-the-team {
+  background-image: url('../images/profile.png');
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  #meet-the-team > div > h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  #meet-the-team > div > div {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    row-gap: 5.25rem;
+  }
+}
+
+#our-services {
+  background-image: url('../images/services.png');
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  #our-services > div > h2 {
+    flex-direction: row;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  #our-services > div > div {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+#clients {
+  background-image: url('../images/clients.png');
+  background-size: cover;
+}
+
+#contact-us {
+  background-image: url('../images/contact-us.png');
+  background-size: cover;
+}
+
+#contact-us > div > div {
+  align-items: end;
+}
+
+@media screen and (max-width: 768px) {
+  #contact-us > div > div {
+    margin-top: 4rem;
+    align-items: start;
+  }
+}
